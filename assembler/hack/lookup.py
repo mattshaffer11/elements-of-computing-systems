@@ -1,5 +1,16 @@
+"""
+This module provides logic for the lookup table.
+"""
+
 class Lookup(object):
+    """
+    Dictionary with a pre-defined set of values based on hack specification.
+    """
+
     def __init__(self):
+        """
+        Intializes lookup table with pre-defined values.
+        """
         self._next_value = 16
         self._values = {
             'SP': 0,
@@ -15,9 +26,32 @@ class Lookup(object):
             self._values['R' + str(i)] = i
 
     def get(self, name):
+        """
+        Retrieves a value from the table.
+
+        Parameters
+        ----------
+        name : str
+
+        Returns
+        -------
+        value : int
+        """
         return self._values.get(name)
 
     def add(self, name, value=None):
+        """
+        Adds a value to the lookup table.
+
+        Parameters
+        ----------
+        name : str
+        value : int, optional
+
+        Returns
+        -------
+        value : int
+        """
         if value:
             self._values[name] = value
         else:

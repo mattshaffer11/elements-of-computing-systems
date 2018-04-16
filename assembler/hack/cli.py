@@ -1,3 +1,9 @@
+#!/usr/bin/env python
+
+"""
+Module providing CLI for assembler.
+"""
+
 import os
 import argparse
 
@@ -5,6 +11,9 @@ from .parser import parse
 
 
 def main():
+    """
+    Main entry point for assembler.
+    """
     parser = argparse.ArgumentParser(description='Translates Hack assembly language into binary code.')
     parser.add_argument('source', type=argparse.FileType('r'), help='source file')
     parser.add_argument(

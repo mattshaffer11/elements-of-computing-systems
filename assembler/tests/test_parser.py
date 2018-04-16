@@ -22,5 +22,6 @@ def test_is_valid_symbol():
 
     for symbol in invalid_symbols:
         assert not _is_valid_symbol(symbol)
+        
     for symbol in valid_symbols:
         assert _is_valid_symbol(symbol)
